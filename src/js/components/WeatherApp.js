@@ -1,8 +1,5 @@
 import React from 'react';
 
-// Style Imports
-import '../css/WeatherApp.scss';
-
 // Component Imports
 import LocationHeader from './LocationHeader';
 import FloatingWeatherContainer from './FloatingWeatherContainer';
