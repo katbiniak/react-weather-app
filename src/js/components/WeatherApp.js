@@ -5,7 +5,7 @@ import LocationHeader from './LocationHeader';
 import FloatingWeatherContainer from './FloatingWeatherContainer';
 
 /**
- * WeatherApp: React component that is the main container and renderer for the Weather application, calls initial API to populate the store
+ * WeatherApp: React component that is the main container and renderer for the Weather application
  * @returns {JSX} 
  */
 const WeatherApp = () => {

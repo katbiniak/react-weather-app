@@ -1,10 +1,23 @@
 
 import React, { useEffect, useState } from 'react';
 
+// Component Imports
+import CurrentWeather from './CurrentWeather';
+import DailyForcastContainer from './DailyForcastContainer';
+import UnitsToggle from './UnitsToggle';
+
+// Helper Imports
 import ForcastActions from '../actions/ForcastActions';
 import { UNITS } from '../constants/units';
+
+//Image Imports
+import dallas from '../../resources/dallas.png';
+import cloudLarge from '../../resources/cloud-big.png';
+import cloudSmall from '../../resources/cloud-small.png';
+
+
 /**
- * FloatingWeatherContainer: React component that is the main container and renderer for the Weather application, calls initial API to populate the store
+ * FloatingWeatherContainer: React component that is the main container for forcast data, calls initial APIs to populate the store
  * @returns {JSX} 
  */
 const FloatingWeatherContainer = () => {
@@ -49,10 +62,16 @@ const FloatingWeatherContainer = () => {
 
 
   return (
-    <div className="floating-weather--container">
+    <div className="floating-weather floating-weather--container">
       <div className="floating-weather--background">
-
+        <img className="cloud-img cloud-img--small" src={cloudSmall} alt=""/>
+        <img className="dallas-skyline-img" src={dallas} alt="Dallas Skyline"/>
+        <img className="cloud-img cloud-img--big" src={cloudLarge} alt=""/>
       </div>
+
+      <CurrentWeather /> 
+      <UnitsToggle />
+      <DailyForcastContainer />
     </div>
   );
 }
