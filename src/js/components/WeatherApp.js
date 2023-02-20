@@ -9,6 +9,7 @@ import FloatingWeatherContainer from './FloatingWeatherContainer';
  * @returns {JSX} 
  */
 const WeatherApp = () => {
+
   return (
     <div className="weather-app--container">
       <LocationHeader

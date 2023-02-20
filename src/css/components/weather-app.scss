@@ -1,5 +1,14 @@
 .weather-app {
   &--container {
     text-align: center;
+    margin: 15px;
+  }
+}
+
+@media (min-width: $desktop) {
+  .weather-app {
+    &--container {
+      margin: 80px;
+    }
   }
 }
