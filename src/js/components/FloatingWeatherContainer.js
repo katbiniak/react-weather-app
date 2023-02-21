@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
 
 // Component Imports
 import CurrentWeather from './CurrentWeather';
@@ -25,29 +25,29 @@ const FloatingWeatherContainer = () => {
     const [ currentWeather, setCurrentWeather ] = useState();
     const [ dailyWeather, setDailyWeather ] = useState();
 
-    const forcastActions = new ForcastActions();
+    const forcastActions = useMemo(() => new ForcastActions(), []);
 
     /**
      * getCurrentWeather: Calls the current weather action to get the data needed for Location Header
      */
-    const getCurrentWeather = () => {
+    const getCurrentWeather = useCallback(() => {
         forcastActions.getCurrentForcast(currentUnit).then( response => {
             if (response) {
                 setCurrentWeather(response);
             }
         });
-    }
+    }, [currentUnit, forcastActions]);
 
     /**
      * getDailyWeather: Calls the week forcast action to get the data needed for Floating Weather Container
      */
-    const getDailyWeather = () => {
+    const getDailyWeather = useCallback(() => {
         forcastActions.getWeekForcast(currentUnit).then( response => {
             if (response) {
                 setDailyWeather(response);
             }
         });
-    }
+    }, [currentUnit, forcastActions]);
 
     useEffect (() => {
         if (shouldUpdateWeather) {
@@ -56,9 +56,10 @@ const FloatingWeatherContainer = () => {
             getDailyWeather();
         }
     }, [
-        shouldUpdateWeather,
         getCurrentWeather,
-        getDailyWeather
+        getDailyWeather,
+        shouldUpdateWeather,
+        setShouldUpdateWeather
     ]);
 
     return (
