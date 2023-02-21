@@ -7,6 +7,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ### Node Versioning
 
 node:   v19.6.1
+
 npm:    v9.4.0
 
 ### Api Details
