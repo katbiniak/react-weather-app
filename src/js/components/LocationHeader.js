@@ -5,7 +5,7 @@ import { LABELS}  from '../constants/labels';
 
 
 /**
- * LocationHeader: React component that is the main container and renderer for the Weather application, calls initial API to populate the store
+ * LocationHeader: React component that is the renders the current location and date
  * @returns {JSX} 
  */
 const LocationHeader = () => {

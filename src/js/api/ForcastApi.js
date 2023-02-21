@@ -2,7 +2,7 @@ import axios from 'axios';
 import { API_ENDPOINTS } from '../constants/api-endpoints';
 
 /**
- * ForcastApi: Class that containsforcast api calls and parsing of response data
+ * ForcastApi: Class that contains forcast api calls and parsing of response data
  *  
  */
 export default class ForcastApi {
@@ -32,7 +32,6 @@ export default class ForcastApi {
         } catch (e) {
             console.error('Current Forcast Error:', e)
         }
-
     }
 
     /** 

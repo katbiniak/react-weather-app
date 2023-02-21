@@ -11,6 +11,9 @@ const UnitsToggle = props => {
     const { setCurrentUnit, shouldUpdateWeather} = props;
     const [checked, setChecked] = useState(true);
 
+    /**
+     * handleUnitsChange: onChange event for the input toggle, triggers callback to update the units and make api calls
+     */
     const handleUnitsChange = () => {
         setChecked(!checked);
         

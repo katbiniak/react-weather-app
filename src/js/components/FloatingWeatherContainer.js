@@ -49,6 +49,7 @@ const FloatingWeatherContainer = () => {
         });
     }, [currentUnit, forcastActions]);
 
+    // Initial Calls to get the current and daily weather values, also called when units change
     useEffect (() => {
         if (shouldUpdateWeather) {
             setShouldUpdateWeather(false);

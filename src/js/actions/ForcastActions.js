@@ -14,11 +14,10 @@ export default class ForcastActions {
     *
     * @param {String} units: metric (M) or imperial (I) units for tempurature data
     */
-    getCurrentForcast (units) {
+    getCurrentForcast = async (units) => {
         return this.forcastApi.getCurrentForcast(units).then((response) => {
              return response;
         })
-
     }
 
     /** 
