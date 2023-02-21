@@ -10,17 +10,14 @@
     margin-right: auto;
 
     &--tempurature {
-        font-family: $open-sans;
-        font-size: 48px;
+        @include setFont($font-size: 48px, $color: $light-blue);
         margin: 10px 10px 0 30px;
         margin-left: 30px;
         margin-top: 0;
     }
 
     &--secondary {
-        font-family: $open-sans;
-        font-style: italic;
-        font-size: 14px;
+        @include setFont($font-style: italic, $color: $light-blue);
         text-align: left;
         margin-bottom: 12px;
     }
