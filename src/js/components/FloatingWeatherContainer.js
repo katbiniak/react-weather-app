@@ -55,8 +55,11 @@ const FloatingWeatherContainer = () => {
             getCurrentWeather();
             getDailyWeather();
         }
-    }, [shouldUpdateWeather, getCurrentWeather]);
-
+    }, [
+        shouldUpdateWeather,
+        getCurrentWeather,
+        getDailyWeather
+    ]);
 
     return (
         <div className='floating-weather floating-weather--container'>
@@ -66,16 +69,16 @@ const FloatingWeatherContainer = () => {
                 <img className='cloud-img cloud-img--big' src={cloudLarge} alt=''/>
             </div>
             <div className='floating-weather--data'>
-                {currentWeather &&
-                <CurrentWeather
-                    currentUnit={currentUnit}
-                    weather={currentWeather}
-                /> 
-                }
                 <UnitsToggle
                     setCurrentUnit={setCurrentUnit}
                     shouldUpdateWeather={setShouldUpdateWeather}
                 />
+                {currentWeather &&
+                    <CurrentWeather
+                        currentUnit={currentUnit}
+                        weather={currentWeather}
+                    /> 
+                }
             </div>
             <DailyForcastContainer
                 dailyWeather={dailyWeather}

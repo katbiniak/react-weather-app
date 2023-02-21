@@ -17,6 +17,11 @@ const CurrentWeather = props => {
             <p className='current-weather--tempurature'>
                 {`${Math.round(weather?.temp) || 'N/A'}${LABELS.DEGREES}`}
             </p>
+            <img
+                className='current-weather--icon'
+                src={require(`../../resources/icons/${weather?.weather?.icon}.png`)}
+                alt={weather?.weather?.description}
+            />
             <div className='current-weather--secondary'>
                 <p className='current-weather--description '>
                     {weather.weather?.description || ''}

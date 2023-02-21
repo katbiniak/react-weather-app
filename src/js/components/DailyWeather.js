@@ -15,7 +15,12 @@ const DailyWeather = (props) => {
             <p className='daily-weather--day'>
                 {getDayOfWeek(weather?.valid_date)}
             </p>
-            <p className='daily-weather--tempurature'>
+            <img
+                className='daily-weather--icon'
+                src={require(`../../resources/icons/${weather?.weather?.icon}.png`)}
+                alt={weather?.weather?.description}
+            />
+            <p className='daily-weather--temperature'>
                 {`${Math.round(weather?.high_temp) || 'N/A'}${LABELS.DEGREES}`}
             </p>
         </div>

@@ -10,19 +10,19 @@ import { LABELS}  from '../constants/labels';
  */
 const LocationHeader = () => {
 
-  const currentDate = formattedCurrentDate();
+    const currentDate = formattedCurrentDate();
 
-  return (
-    <div className="location-header--container">
-      <p className="location-header--name">
-        <LocationIcon />
-        {LABELS.LOCATION}
-      </p>
-      <p className="location-header--date">
-        {currentDate}
-      </p>
-    </div>
-  );
+    return (
+        <div className="location-header--container">
+            <p className="location-header--name">
+                <LocationIcon />
+                {LABELS.LOCATION}
+            </p>
+            <p className="location-header--date">
+                {currentDate}
+            </p>
+        </div>
+    );
 }
 
 export default LocationHeader;

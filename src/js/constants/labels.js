@@ -8,5 +8,4 @@ export const LABELS = {
     FAHRENHEIT:     'F',
     LOCATION:       'Dallas, TX',
     MPH:            'mph'
-
 };

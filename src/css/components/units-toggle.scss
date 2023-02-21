@@ -3,6 +3,7 @@
     height: 25px;
     margin-right: 20px;
     margin-top: 20px;
+    margin-left: auto;
     position: relative;
     width: 55px;
 
@@ -92,5 +93,6 @@
 @media (min-width: $tablet) {
     .units-toggle {
         margin-top: 30px;
+        margin-left: 0;
     }
 }

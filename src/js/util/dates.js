@@ -16,10 +16,12 @@ export function formattedCurrentDate() {
 }
 
 /**
-* getDayOfWeek: function that takes in a date object and returns the shorten day of the week
+* getDayOfWeek: function that takes in a date object and returns the short day of the week
+*
+*@param {String} date: date string in the form of YYYY-MM-DD
 */
 export function getDayOfWeek(date){
-    let dateObj = new Date(date);
+    let dateObj = new Date(`${date}T12:00:00Z`);
 
     return WEEKDAYS_SHORT[dateObj.getDay()] || '';
 }

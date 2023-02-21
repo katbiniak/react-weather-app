@@ -10,14 +10,14 @@ import FloatingWeatherContainer from './FloatingWeatherContainer';
  */
 const WeatherApp = () => {
 
-  return (
-    <div className="weather-app--container">
-      <LocationHeader
-      />
-      <FloatingWeatherContainer
-      />
-    </div>
-  );
+    return (
+        <div className="weather-app--container">
+            <LocationHeader
+            />
+            <FloatingWeatherContainer
+            />
+        </div>
+    );
 }
 
 export default WeatherApp;
