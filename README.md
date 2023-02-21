@@ -21,6 +21,7 @@ Forcast API: https://www.weatherbit.io/api/weather-forecast-16-day
 
 ### Folder Structure
 
+```
 .
 ├── build                   # prod build output files, only appears after running build locally
 ├── node_modules            
@@ -48,6 +49,7 @@ Forcast API: https://www.weatherbit.io/api/weather-forecast-16-day
 ├── package.json
 ├── README
 └── ...
+```
 
 ## Available Scripts
 
