@@ -1,0 +1,90 @@
+.units-toggle {
+    display: inline-block;
+    height: 25px;
+    margin-right: 20px;
+    margin-top: 30px;
+    position: relative;
+    width: 55px;
+
+    input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    &--slider {
+        background-color: $med-blue;
+        border-radius: 25px;
+        cursor: pointer;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+        -webkit-transition: .4s;
+        transition: .4s;
+
+        &::before {
+            position: absolute;
+            content: "";
+            background-color: $white;
+            bottom: 2px;
+            border-radius: 50%;
+            left: 3px;
+            height: 21px;
+            width: 21px;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+    }
+
+    &--input:checked {
+        + .units-toggle--slider {
+            background-color: $med-blue;
+
+            &::before {
+                -webkit-transform: translateX(28px);
+                -ms-transform: translateX(28px);
+                transform: translateX(28px);
+            }
+        }
+    }
+
+    &--unit {
+        display: flex;
+        height: 100%;
+        font-family: $open-sans;
+        font-style: italic;
+        font-size: 14px;
+        margin: 0;
+        position: absolute;
+        text-align: center;
+        top: 2px;
+        width: 100%;
+
+        #celsius,
+        #fahrenheit {
+            width: 50%;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        #celsius {
+            color: $med-blue;
+        }
+
+        #fahrenheit {
+            color: $white;
+        }
+    }
+
+    &--checked {
+        #celsius {
+            color: $white;
+        }
+
+        #fahrenheit {
+            color: $med-blue;
+        }
+    }
+}

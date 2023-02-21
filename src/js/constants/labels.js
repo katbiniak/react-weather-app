@@ -3,8 +3,9 @@
 */
 
 export const LABELS = {
-    CELSIUS:        'C&deg;',
-    FAHRENHEIT:     'F&deg;',
+    CELSIUS:        'C',
+    DEGREES:        '\u00B0',
+    FAHRENHEIT:     'F',
     LOCATION:       'Dallas, TX',
     MPH:            'mph'
 

@@ -1,0 +1,26 @@
+.current-weather {
+    color: $light-blue;
+    display: flex;
+    align-items: flex-end;
+
+    &--tempurature {
+        font-family: $open-sans;
+        font-size: 48px;
+        margin: 10px 10px 0 30px;
+        margin-left: 30px;
+        margin-top: 10px;
+    }
+
+    &--secondary {
+        font-family: $open-sans;
+        font-style: italic;
+        font-size: 14px;
+        text-align: left;
+        margin-bottom: 12px;
+    }
+
+    &--description,
+    &--windspeed {
+        margin: 0;
+    }
+}

@@ -7,7 +7,6 @@ import { WEEKDAYS } from "../constants/weekdays";
 export function formattedCurrentDate() {
     let date = new Date();
     let currentWeekday = WEEKDAYS[date.getDay()];
-    console.log(currentWeekday);
 
     let year = date.getFullYear();
     let month = MONTHS_SHORT[date.getMonth()];

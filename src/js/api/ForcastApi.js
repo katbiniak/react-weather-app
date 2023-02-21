@@ -18,10 +18,14 @@ export default class ForcastApi {
     */
     getCurrentForcast = async (units) => {
         try {
-            let url = `${this.baseUrl}${API_ENDPOINTS.CURRENT}?&key=${this.API_KEY}&postal_code=75201&country=US&units=${units}`;
+            let url = `${this.baseUrl}${API_ENDPOINTS.CURRENT}?&key=${this.API_KEY}&lat=32.7904&lon=-96.8044&units=${units}`;
 
             const response = await axios.get(url);
-            console.log(response);
+
+            if (response?.data?.data.length > 0) {
+                return response.data.data[0];
+            }
+
             return {
                 ...response
             }
@@ -33,10 +37,10 @@ export default class ForcastApi {
 
     getWeekForcast = async (units) => {
         try {
-            let url = `${this.baseUrl}${API_ENDPOINTS.FORCAST}?key=${this.API_KEY}&postal_code=75201&country=US&days=6&units=${units}`;
+            let url = `${this.baseUrl}${API_ENDPOINTS.FORCAST}?key=${this.API_KEY}&lat=32.7904&lon=-96.8044&days=6&units=${units}`;
 
             const response = await axios.get(url);
-            console.log(response);
+
             return {
                 ...response
             }
