@@ -32,3 +32,11 @@
 
 $open-sans: 'open-sans', 'Arial', sans-serif;
 $open-sans-cond: 'open-sans-cond', 'Arial', sans-serif;
+
+@mixin setFont($font-family: $open-sans, $font-style: normal, $font-weight: normal, $font-size: 14px, $color: $grey) {
+    color: $color;
+    font-family: $font-family;
+    font-size: $font-size;
+    font-style: $font-style;
+    font-weight: $font-weight;
+}

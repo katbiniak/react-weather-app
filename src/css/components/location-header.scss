@@ -1,8 +1,6 @@
 .location-header {
     &--container {
-        color: $white;
-        font-family: $open-sans-cond;
-        font-size: 14px;
+        @include setFont($font-family: $open-sans-cond, $color: $white);
         margin: auto;
         max-width: 120px;
         padding: 5px 0 20px;
