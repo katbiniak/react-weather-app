@@ -2,7 +2,7 @@
     display: inline-block;
     height: 25px;
     margin-right: 20px;
-    margin-top: 30px;
+    margin-top: 20px;
     position: relative;
     width: 55px;
 
@@ -86,5 +86,11 @@
         #fahrenheit {
             color: $med-blue;
         }
+    }
+}
+
+@media (min-width: $tablet) {
+    .units-toggle {
+        margin-top: 30px;
     }
 }

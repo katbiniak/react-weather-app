@@ -1,0 +1,12 @@
+.daily-weather {
+    border-right: 1px solid $off-white;
+    color: $grey;
+    font-family: $open-sans;
+    font-weight: bold;
+    font-size: 14px;
+    width: 100%;
+
+    &:last-child {
+        border: none;
+    }
+}

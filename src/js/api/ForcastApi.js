@@ -35,11 +35,23 @@ export default class ForcastApi {
 
     }
 
+    /** 
+    * getWeekForcast: Calls the get current forcast api for weather data for the next 5 days
+    *
+    * @param {String} units: metric (M) or imperial (I) units for tempurature data
+    */
     getWeekForcast = async (units) => {
         try {
             let url = `${this.baseUrl}${API_ENDPOINTS.FORCAST}?key=${this.API_KEY}&lat=32.7904&lon=-96.8044&days=6&units=${units}`;
 
             const response = await axios.get(url);
+
+            if (response?.data?.data.length > 0) {
+                // drop the first item from dates array as it is the current day which we do not need
+                let data = response.data.data;
+                data.shift();
+                return data;
+            }
 
             return {
                 ...response

@@ -53,7 +53,7 @@ const FloatingWeatherContainer = () => {
         if (shouldUpdateWeather) {
             setShouldUpdateWeather(false);
             getCurrentWeather();
-            // getDailyWeather();
+            getDailyWeather();
         }
     }, [shouldUpdateWeather, getCurrentWeather]);
 
@@ -77,7 +77,9 @@ const FloatingWeatherContainer = () => {
                     shouldUpdateWeather={setShouldUpdateWeather}
                 />
             </div>
-            <DailyForcastContainer />
+            <DailyForcastContainer
+                dailyWeather={dailyWeather}
+            />
         </div>
     );
 }

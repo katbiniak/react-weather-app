@@ -5,6 +5,14 @@
   }
 }
 
+@media (min-width: $tablet) {
+  .weather-app {
+    &--container {
+      margin: 40px;
+    }
+  }
+}
+
 @media (min-width: $desktop) {
   .weather-app {
     &--container {

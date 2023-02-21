@@ -15,7 +15,7 @@ const CurrentWeather = props => {
     return (
         <div className='current-weather'>
             <p className='current-weather--tempurature'>
-                {`${weather?.temp || 'N/A'}${LABELS.DEGREES}`}
+                {`${Math.round(weather?.temp) || 'N/A'}${LABELS.DEGREES}`}
             </p>
             <div className='current-weather--secondary'>
                 <p className='current-weather--description '>
