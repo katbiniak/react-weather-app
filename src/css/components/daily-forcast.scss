@@ -1,0 +1,12 @@
+.daily-forcast {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: -25px;
+    width: 100%;
+}
+
+@media (min-width: $tablet) {
+    .daily-forcast {
+        margin-top: 0;
+    }
+}

@@ -1,0 +1,34 @@
+// Regular
+@font-face {
+    font-family: 'open-sans';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../../resources/fonts/OpenSans-Regular.ttf') format('truetype');
+}
+
+// Bold
+@font-face {
+    font-family: 'open-sans';
+    font-style: normal;
+    font-weight: bold;
+    src: url('../../resources/fonts/OpenSans-Bold.ttf') format('truetype');
+}
+
+// Italic
+@font-face {
+    font-family: 'open-sans';
+    font-style: italic;
+    font-weight: normal;
+    src: url('../../resources/fonts/OpenSans-LightItalic.ttf') format('truetype');
+}
+
+// Condensed
+@font-face {
+    font-family: 'open-sans-cond';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../../resources/fonts/OpenSans_Condensed-Regular.ttf') format('truetype');
+}
+
+$open-sans: 'open-sans', 'Arial', sans-serif;
+$open-sans-cond: 'open-sans-cond', 'Arial', sans-serif;

@@ -1,0 +1,22 @@
+.weather-app {
+  &--container {
+    text-align: center;
+    margin: 15px 0;
+  }
+}
+
+@media (min-width: $tablet) {
+  .weather-app {
+    &--container {
+      margin: 40px;
+    }
+  }
+}
+
+@media (min-width: $desktop) {
+  .weather-app {
+    &--container {
+      margin: 80px;
+    }
+  }
+}

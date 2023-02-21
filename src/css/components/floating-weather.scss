@@ -1,0 +1,122 @@
+.floating-weather {
+    &--container {
+        background-color: $white;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.203436);
+        border-radius: 3px;
+        height: 100%;
+        position: relative;
+        width: 100%;
+    }
+
+    &--background {
+        height: 320px;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+    }
+
+    .dallas-skyline-img {
+        height: 100%;
+        left: 50%;
+        object-fit: cover;
+        position: absolute;
+        transform: translate(-50%, 0);
+        text-align: center;
+        top: -12px;
+        width: 105%;
+        z-index: 1;
+    }
+
+    .cloud-img {
+        overflow: visible;
+        position: absolute;
+        z-index: 100;
+
+        &--big {
+            top: 5%;
+            right: 0;
+            width: 30%;
+        }
+
+        &--small {
+            top: 10%;
+            left: 0;
+            width: 30%;
+        }
+    }
+
+    &--data {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 200;
+    }
+}
+
+@media (min-width: $tablet) {
+    .floating-weather {
+        &--container {
+            margin: auto;
+            max-width: 670px;
+        }
+
+        &--background {
+            height: 368px;
+            overflow: visible;
+        }
+
+        .dallas-skyline-img {
+            top: -15px;
+            left: -15px;
+            height: auto;
+            width: auto;
+            transform: none;
+        }
+
+        &--data {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 200;
+        }
+
+        .cloud-img {  
+            &--big {
+                top: 60px;
+                right: -5%;
+                width: auto;
+            }  
+            &--small {
+                top: 130px;
+                left: -5%;
+                width: auto;
+            }
+        }
+    }
+}
+
+@media (min-width: $desktop) {
+    .floating-weather {
+        &--container {
+            margin: auto;
+            max-width: 670px;
+        }
+
+        .cloud-img {  
+            &--big {
+                right: -10%;
+            }  
+            &--small {
+                left: -12%;
+            }
+        }
+    }
+}

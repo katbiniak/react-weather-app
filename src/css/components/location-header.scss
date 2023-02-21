@@ -1,0 +1,32 @@
+.location-header {
+    &--container {
+        color: $white;
+        font-family: $open-sans-cond;
+        font-size: 14px;
+        margin: auto;
+        max-width: 120px;
+        padding: 5px 0 20px;
+    }
+
+    &--name, 
+    &--date {
+        margin: 0;
+    }
+
+    &--name {
+        align-items: center;
+        display: flex;
+        font-size: 18px;
+        justify-content: space-between;
+        max-width: 100px;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: $tablet) {
+    .location-header {
+        &--container {
+            padding: 40px 0 20px;
+        }
+    }
+}
